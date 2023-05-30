@@ -1,22 +1,24 @@
-import React from "react";
 import Link from "next/link";
 
 function Navigation() {
   return (
-    <ul>
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/about">About</Link>
-      </li>
-      <li>
-        <Link href="/services">Services</Link>
-      </li>
-      <li>
-        <Link href="/users">Users</Link>
-      </li>
-    </ul>
+    <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div className="container">
+        <Link className="navbar-brand" href="/">
+          <h1>Next.js</h1>
+        </Link>
+      </div>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link className="nav-link" href="/about">About</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" href="/services">Services</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 export default Navigation;
